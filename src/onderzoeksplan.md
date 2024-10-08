@@ -1,5 +1,12 @@
 # Onderzoeksplan
 
-Lees en volg de [workshop-prompt-engineering](https://minordevops.nl/week-5-slack-ops/workshop-onderzoeksplan-prompt-engineering.html).
+## hoofd- en deelvragen
 
-Verzin o.a. een titel voor je blog, pas de folder naam hier op aan en gebruik [kebab-case](https://en.toolpage.org/tool/kebabcase).
+hoofdvraag: Hoe kan Apollo gebruikt kunnen worden in een microservices applicatie?
+
+deelvragen:
+
+- Wat is Apollo? (Library: Literature study)
+- Wat zijn de voordelen van het gebruik van Apollo in een microservices-applicatie?(Library: Community Research)
+- Wat zijn de nadelen van het gebruik van Apollo in een microservices-applicatie?(Library: Community Research)
+- Hoe kan Apollo worden geïntegreerd met andere tools en frameworks binnen een microservices-applicatie?(Workshop: Prototyping)
