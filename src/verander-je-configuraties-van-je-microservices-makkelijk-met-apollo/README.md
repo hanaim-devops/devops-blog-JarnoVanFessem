@@ -381,6 +381,8 @@ apollo.meta=<http://apollo-service-dev-apollo-configservice:8080>
 
 ## Conclusie
 
+In deze blogpost heb ik besproken hoe Apollo een oplossing biedt voor het beheren van configuraties in microservices-architecturen, maar ondanks de voordelen kleven er ook flinke nadelen aan het gebruik ervan. De implementatie is behoorlijk complex en kan veel tijd kosten, zeker als je werkt in een bestaande infrastructuur. Daarnaast is de documentatie vaak gebrekkig en vooral in het Chinees beschikbaar, wat de leercurve flink steiler maakt. Hoewel Apollo schaalbaarheid en real-time wijzigingen zonder downtime mogelijk maakt, introduceert het tegelijkertijd prestatie-overhead en verhoogt het de afhankelijkheid van een centrale service, wat kan leiden tot een single point of failure. Dit maakt Apollo vooral geschikt voor organisaties met de nodige ervaring en resources, maar minder voor kleinere teams die snel resultaat willen boeken.
+
 ## Bronenn
 
 - YesChat.AI. (z.d.). Apollo-Free, real-time configuration management. https://www.yeschat.ai/gpts-ZxX4DcRP-Apollo
