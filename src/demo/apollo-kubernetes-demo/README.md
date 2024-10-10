@@ -119,14 +119,15 @@ SELECT `Id`, `Key`, `Value`, `Comment` FROM `ServerConfig` LIMIT 1;
 ### Install Apollo Configuration Service:
 
 ```bash
-helm install apollo-service apollo/apollo-service ^
---set configdb.host=my-mysql.default.svc.cluster.local ^
---set configdb.userName=root ^
---set configdb.password=apollo ^
---set configdb.service.enabled=true ^
---set configService.replicaCount=1 ^
---set adminService.replicaCount=1 ^
--n apollo
+helm install apollo-service-dev ^
+    --set configdb.host=10.96.114.26 ^
+    --set configdb.userName=root ^
+    --set configdb.password=apollo ^
+    --set configdb.service.enabled=false ^
+    --set configService.replicaCount=1 ^
+    --set adminService.replicaCount=1 ^
+    -n apollo ^
+    apollo/apollo-service
 ```
 
 ### Port Forward for Apollo Services:
@@ -148,16 +149,17 @@ kubectl port-forward service/apollo-service-apollo-adminservice 8090:8090 --name
 ### Install Apollo Portal:
 
 ```bash
-helm install apollo-portal apollo/apollo-portal ^
---set configdb.host=my-mysql.default.svc.cluster.local ^
---set configdb.userName=root ^
---set configdb.password=apollo ^
---set configdb.service.enabled=true ^
---set portaldb.host=my-mysql.default.svc.cluster.local ^
---set portaldb.userName=root ^
---set portaldb.password=apollo ^
---set portaldb.service.enabled=true ^
--n apollo
+helm install apollo-portal ^
+    --set portaldb.host=10.96.114.26 ^
+    --set portaldb.userName=root ^
+    --set portaldb.password=apollo ^
+    --set portaldb.service.enabled=false ^
+    --set config.envs="dev\,pro" ^
+    --set config.metaServers.dev=http://apollo-service-dev-apollo-configservice:8080 ^
+    --set config.metaServers.pro=http://apollo-service-pro-apollo-configservice:8080 ^
+    --set replicaCount=1 ^
+    -n apollo ^
+    apollo/apollo-portal
 ```
 
 ### Port Forward to Access Apollo Portal:

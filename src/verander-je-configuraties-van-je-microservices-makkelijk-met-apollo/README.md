@@ -1,9 +1,25 @@
 # Verander je configuraties van je microservices makkelijk met apollo
 
-<img src="plaatjes/mdbook_logo.png" width="250" align="right" alt="mdbook logo om weg te halen" title="maar vergeet de alt tekst niet">
+<img src="plaatjes/ApolloLogo.png" width="250" align="right" alt="mdbook logo om weg te halen" title="maar vergeet de alt tekst niet">
 
 *[Jarno van Fessem, oktober 2024.](https://github.com/hanaim-devops/devops-blog-JarnoVanFessem)*
 <hr/>
+
+## Inhoudsopgave
+
+- [Wat is Apollo?](#wat-is-apollo)
+  - [Applicatie structuur Apollo](#applicatie-structuur-apollo)
+- [Wat zijn de voordelen van Apollo?](#wat-zijn-de-voordelen-van-apollo)
+- [Wat zijn de nadelen van Apollo?](#wat-zijn-de-nadelen-van-apollo)
+- [Stapsgewijze Implementatie van Apollo](#stapsgewijze-implementatie-van-apollo)
+  - [Quick start met Docker](#quick-start-met-docker)
+    - [Development guide in Kubernetes](#development-guide-in-kubernetes)
+      - [MySQL database klaarzetten](#mysql-database-klaarzetten)
+        - [Create Apollo Databases](#create-apollo-databases)
+        - [Import the SQL Scripts](#import-the-sql-scripts)
+    - [Apollo services installeren](#apollo-services-installeren)
+      - [Configuraties gebruiken](#configuraties-gebruiken)
+- [Conclusie](#conclusie)
 
 In de wereld van microservices is een goed configuratiebeheer cruciaal voor het soepel draaien van applicaties. Apollo is een krachtig tool voor configuratiemanagement dat speciaal is ontworpen voor het beheren van configuraties in een microservices-architectuur. In deze blog wordt er gekeken naar hoe Apollo gebruikt kan worden in een microservices applicatie?
 
@@ -14,6 +30,7 @@ Eerst wordt er uitgelegd wat Apollo is en wat de voordelen en nadelen hiervan zi
 Apollo is een open-source configuration management platform dat is ontwikkeld door Ctrip, een van de grootste online reisplatformen in China, en later vrijgegeven als een project op GitHub. Het primaire doel van Apollo is om het centrale beheer van configuraties mogelijk te maken voor gedistribueerde applicaties, waaronder microservices. Het biedt een eenvoudige manier om configuraties dynamisch en real-time te beheren zonder dat de applicaties opnieuw opgestart hoeven te worden. Hierdoor worden de operationele processen vereenvoudigd, vooral in complexe omgevingen waar meerdere microservices actief zijn. Het aanpassen van deze configuraties gebeurt in de portaal applicatie.
 
 ![Portaal overzicht](plaatjes/portaalOverzicht.png)
+*Afbeelding 1 - Apollo portaal overzicht*
 
 ### Applicatie structuur Apollo
 
@@ -35,6 +52,7 @@ De ConfigService is de kerncomponent van Apollo die verantwoordelijk is voor het
 De ConfigDB is de database waarin alle configuratiegegevens worden opgeslagen. Het bevat de daadwerkelijke configuraties voor de microservices in verschillende omgevingen (zoals ontwikkeling, test, productie). ConfigService haalt hier de configuratiegegevens op om deze aan de microservices door te geven.
 
 ![applicatiestructuur](plaatjes/applicatieStructuur.png)
+*Afbeelding 2 - Apollo applicatiestructuur*
 
 ## Wat zijn de voordelen van Apollo?
 
@@ -82,6 +100,9 @@ docker compose up
 ```
 
 Je kan nu naar je localhost:8070 gaan om de apollo portal applicatie te bekijken en in te loggen met de username: "apollo" en wachtwoord: "admin".
+
+![Apollo inlogscherm](plaatjes/ApolloLoginScreen.png)
+*Afbeelding 3 - Apollo portaal inlog scherm*
 
 Je kan nu in het portaal de applicatie "Sample App" openen en de configuratie van timeout aanpassen of een nieuwe aanmaken. Na het aanmaken/aanpassen moet je release drukken om de configuraties live te zetten.
 
@@ -260,6 +281,9 @@ kubectl --namespace apollo port-forward <pod-name> 8070:8070
 ```
 
 Als je alle stappen hebt gevolgd kan je nu de portal openen op het <http://127.0.0.1:8070> en in loggen met de username: "apollo" en wachtwoord: "admin".
+
+![Apollo inlogscherm](plaatjes/ApolloLoginScreen.png)
+*Afbeelding 3 - Apollo portaal inlogscherm*
 
 Je kan nu in het portaal een applicatie aanmaken en een configuratie aanmaken. Na het aanmaken/aanpassen moet je release drukken om de configuraties live te zetten.
 
