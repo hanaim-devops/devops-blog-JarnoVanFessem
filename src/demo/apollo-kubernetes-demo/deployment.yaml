@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apollo-kubernetes-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apollo-kubernetes-demo
+  template:
+    metadata:
+      labels:
+        app: apollo-kubernetes-demo
+    spec:
+      containers:
+        - name: apollo-kubernetes-demo
+          image: jarnovanfessem/apollokubernetes:latest  # Your Docker image
+          ports:
+            - containerPort: 8100
+          args:                                            # Add your key as a command-line argument here
+            - timeout # Replace <key> with the actual key you want to pass

@@ -1,0 +1,9 @@
+
+g
+java:S26295"$Invoke method(s) only conditionally.(ˆè ‚8ú§†™§2J$65fc94a6-c1b0-4bcb-874a-59446bbd5112
+Ÿ	java:S116""XRename this field "DEFAULT_VALUE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âöÓÍÿÿÿÿÿ8”¨†™§2J$83de48fa-417a-42b4-bc3c-54e04cc8c45b
+r	java:S106;"+Replace this use of System.out by a logger.(ƒàê”þÿÿÿÿ8ÁÝ†™§2J$a718c328-e8c3-49e6-931d-e7ea77467f32
+–
+java:S4719="NReplace "com.google.common.base.Charsets.UTF_8" with "StandardCharsets.UTF_8".(ÁÐÈýÿÿÿÿ8ÄÝ†™§2J$e27ed8ca-3421-4811-8b5a-660c5d02303d
+r	java:S106>"+Replace this use of System.out by a logger.(›Äæ÷üÿÿÿÿ8ÈÝ†™§2J$45be70b0-9cc2-40d3-82f4-26975bed5b10
+L	java:S106G"+Replace this use of System.out by a logger.(î‡ó©ùÿÿÿÿ8¹·‡™§2
