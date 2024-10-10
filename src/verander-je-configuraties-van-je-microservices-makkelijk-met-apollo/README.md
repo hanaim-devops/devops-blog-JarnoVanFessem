@@ -27,7 +27,7 @@ Eerst wordt er uitgelegd wat Apollo is en wat de voordelen en nadelen hiervan zi
 
 ## Wat is Apollo?
 
-Apollo is een open-source configuration management platform dat is ontwikkeld door Ctrip, een van de grootste online reisplatformen in China, en later vrijgegeven als een project op GitHub. Het primaire doel van Apollo is om het centrale beheer van configuraties mogelijk te maken voor gedistribueerde applicaties, waaronder microservices. Het biedt een eenvoudige manier om configuraties dynamisch en real-time te beheren zonder dat de applicaties opnieuw opgestart hoeven te worden. Hierdoor worden de operationele processen vereenvoudigd, vooral in complexe omgevingen waar meerdere microservices actief zijn. Het aanpassen van deze configuraties gebeurt in de portaal applicatie.
+Apollo is een open-source configuration management platform dat is ontwikkeld door Ctrip, een van de grootste online reisplatformen in China, en later vrijgegeven als een project op GitHub. Het primaire doel van Apollo is om het centrale beheer van configuraties mogelijk te maken voor gedistribueerde applicaties, waaronder microservices. Het biedt een eenvoudige manier om configuraties dynamisch en real-time te beheren zonder dat de applicaties opnieuw opgestart hoeven te worden. Hierdoor worden de operationele processen vereenvoudigd, vooral in complexe omgevingen waar meerdere microservices actief zijn. Het aanpassen van deze configuraties gebeurt in de portaal applicatie.(Apollo, z.d.-a),(Apollo, z.d.-b),(Microservices, z.d.)
 
 ![Portaal overzicht](plaatjes/portaalOverzicht.png)
 *Afbeelding 1 - Apollo portaal overzicht*
@@ -54,6 +54,8 @@ De ConfigDB is de database waarin alle configuratiegegevens worden opgeslagen. H
 ![applicatiestructuur](plaatjes/applicatieStructuur.png)
 *Afbeelding 2 - Apollo applicatiestructuur*
 
+(Apollo, z.d.-a),(Two Sides Of Ctrip: How Does The Distributed Configuration Center Server Perceive Configuration Changes?, 2022)
+
 ## Wat zijn de voordelen van Apollo?
 
 Apollo biedt aanzienlijke voordelen bij het beheren van configuraties in een microservices-architectuur. Het stelt teams in staat om configuraties centraal te beheren, waardoor beheer eenvoudiger wordt, en biedt real-time wijzigingen zonder downtime, wat operationele efficiëntie verbetert. Bovendien is Apollo schaalbaar, biedt versiebeheer en rollback-functionaliteit, en integreert naadloos met frameworks zoals Spring Cloud en Kubernetes. Dit maakt het ideaal voor grote organisaties met complexe omgevingen.
@@ -71,21 +73,20 @@ Apollo biedt aanzienlijke voordelen bij het beheren van configuraties in een mic
 | Verbeterde DevOps-workflow                    | Automatisering van configuratiebeheer in CI/CD-pipelines voor consistente deployments.          |
 | Lagere kans op menselijke fouten              | Web-based UI en rollback-mogelijkheden beperken de impact van fouten.                          |
 
+(YesChat.AI, z.d.),(Apollo, z.d.-a),(Microservices, z.d.),(探索CTRIp Apollo Client:一款强大的配置中心客户端-CSDN博客, z.d.)
+
 ## Wat zijn de nadelen van Apollo?
 
-Hoewel Apollo veel voordelen biedt voor configuratiebeheer in microservices, zijn er ook enkele nadelen waar rekening mee moet worden gehouden. De implementatie kan complex en tijdrovend zijn, vooral in bestaande architecturen, en er is een zekere afhankelijkheid van Apollo als centrale service. Bovendien kan prestatie-overhead optreden door real-time updates, en zijn er schaalbaarheidslimieten bij zeer grote omgevingen. Teams moeten ook rekening houden met beveiligingsuitdagingen en de steile leercurve bij het implementeren van Apollo.
+Hoewel Apollo veel voordelen biedt voor configuratiebeheer in microservices, zijn er ook enkele nadelen waar rekening mee moet worden gehouden. De implementatie kan complex en tijdrovend zijn, vooral in bestaande architecturen, en er is een zekere afhankelijkheid van Apollo als centrale service. Bovendien kan prestatie-overhead optreden door real-time updates. Teams moeten ook rekening houden met beveiligingsuitdagingen en de steile leercurve bij het implementeren van Apollo. Er is ook amper documentatie/blogpost te vinden over Apollo en als je ze vind is het vooral in het chiness. Daarom zijn de nadelen die hier beschreven zijn vooral uit eigen ervaring
 
 | **Nadeel**                                    | **Uitleg**                                                                                     |
 |-----------------------------------------------|-----------------------------------------------------------------------------------------------|
 | Complexiteit bij implementatie en onderhoud    | Vereist uitgebreide setup en onderhoud, vooral in bestaande systemen zonder ervaring.           |
 | Afhankelijkheid van een centrale service      | Apollo vormt een single point of failure als het niet goed is geconfigureerd of onderhouden.    |
 | Prestatie-overhead                            | Real-time updates kunnen extra netwerkverkeer en latency veroorzaken in gedistribueerde systemen.|
-| Beperkte ondersteuning voor complexe configuraties | Moeilijk om geavanceerde, geneste configuraties te beheren via de Apollo-interface.             |
-| Schaalbaarheidslimieten                       | Bij zeer grote omgevingen kunnen prestatieproblemen ontstaan, vooral bij duizenden microservices.|
-| Beperkte documentatie en ondersteuning         | Documentatie kan ontoereikend zijn, vooral voor complexe configuraties of niet-standaard situaties.|
-| Beperkte integraties met niet-Java ecosystemen | Minder ondersteuning voor talen als Python, Go, en Node.js, waardoor maatwerk nodig is.         |
+| Beperkte documentatie en ondersteuning         | Documentatie kan ontoereikend zijn, vooral voor complexe configuraties of niet-standaard situaties. En als je documentatie vind is het vaak in het chinees|
 | Beveiligingsuitdagingen                       | Extra aandacht vereist voor het beveiligen van toegang tot gevoelige configuraties.             |
-| Learning curve                                | Apollo heeft een steile leercurve, vooral voor teams zonder ervaring met centrale configuratietools. |
+| Learning curve                                | Apollo heeft een steile leercurve, vooral voor teams zonder ervaring met centrale configuratietools. Ook komen er veel nieuwe technologiën aan bod die niet worden uitgelegd |
 
 ## Stapsgewijze Implementatie van Apollo
 
@@ -380,3 +381,12 @@ apollo.meta=<http://apollo-service-dev-apollo-configservice:8080>
 
 ## Conclusie
 
+## Bronenn
+
+- YesChat.AI. (z.d.). Apollo-Free, real-time configuration management. https://www.yeschat.ai/gpts-ZxX4DcRP-Apollo
+- Apollo. (z.d.). https://www.apolloconfig.com/#/
+- Apollo. (z.d.-b). GitHub. https://github.com/apolloconfig
+- Java金融. (z.d.). 携程一面分布式配置系统Apollo是如何实时更新配置的? Weixin Official Accounts Platform. https://mp.weixin.qq.com/s/5KQUS1YqcWnF2rHihfSgpA
+- Two sides of Ctrip: How does the distributed configuration center server perceive configuration changes? (2022, 8 april). Segmentfault. Geraadpleegd op 10 oktober 2024, van https://segmentfault.com/a/1190000041677599/en
+- Microservices. (z.d.). It-blog-cn. Geraadpleegd op 10 oktober 2024, van https://it-blog-cn.com/blogs/springcloud/apollo.html
+- 探索CTRIp Apollo Client:一款强大的配置中心客户端-CSDN博客. (z.d.). https://blog.csdn.net/gitblog_00018/article/details/137419646
