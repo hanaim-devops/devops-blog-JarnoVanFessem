@@ -27,7 +27,7 @@ Eerst wordt er uitgelegd wat Apollo is en wat de voordelen en nadelen hiervan zi
 
 ## Wat is Apollo?
 
-Apollo is een open-source configuration management platform dat is ontwikkeld door Ctrip, een van de grootste online reisplatformen in China, en later vrijgegeven als een project op GitHub. Het primaire doel van Apollo is om het centrale beheer van configuraties mogelijk te maken voor gedistribueerde applicaties, waaronder microservices. Het biedt een eenvoudige manier om configuraties dynamisch en real-time te beheren zonder dat de applicaties opnieuw opgestart hoeven te worden. Hierdoor worden de operationele processen vereenvoudigd, vooral in complexe omgevingen waar meerdere microservices actief zijn. Het aanpassen van deze configuraties gebeurt in de portaal applicatie.(Apollo, z.d.-a),(Apollo, z.d.-b),(Microservices, z.d.)
+Apollo is een open-source configuration management platform dat is ontwikkeld door Ctrip en Qunar, een van de grootste online reisplatformen in China, en later vrijgegeven als een project op GitHub. Het primaire doel van Apollo is om het centrale beheer van configuraties mogelijk te maken voor gedistribueerde applicaties, waaronder microservices. Het biedt een eenvoudige manier om configuraties dynamisch en real-time te beheren zonder dat de applicaties opnieuw opgestart hoeven te worden. Hierdoor worden de operationele processen vereenvoudigd, vooral in complexe omgevingen waar meerdere microservices actief zijn. Het aanpassen van deze configuraties gebeurt in de portaal applicatie.(Apollo, z.d.-a),(Apollo, z.d.-b),(Microservices, z.d.)
 
 ![Portaal overzicht](plaatjes/portaalOverzicht.png)
 *Afbeelding 1 - Apollo portaal overzicht*
