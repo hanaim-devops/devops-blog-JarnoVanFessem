@@ -1,5 +1,5 @@
 # Summary
 
 - [Home](./README.md)
-- [Dev blog](./dev-blog-name-in-kebab-case/README.md)
+- [Dev blog](./verander-je-configuraties-van-je-microservices-makkelijk-met-apollo/README.md)
 - [Onderzoeksplan](./onderzoeksplan.md)
